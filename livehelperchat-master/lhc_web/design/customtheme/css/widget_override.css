@@ -1,0 +1,62 @@
+/**
+* Rename this file to widget_override.css to take effect
+* Write your widget styles here
+**/
+
+.user-avatar {
+	float:right;
+	background-color: red;
+}
+
+.user-message {
+	margin-right:10px;
+	margin-left:20px;
+	float:right;
+	background-color: #F5F5F5;
+}
+
+.message-row {
+	border:none !important;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.admin-avatar {
+	float:left;
+	background-color: green;
+	
+}
+
+.admin-message {
+	margin-right:20px;
+	margin-left:10px;
+	float:left;
+}
+
+.admin-avatar,
+.user-avatar {
+
+	height:20px;
+	width:20px;
+	margin-top: 10px;
+}
+
+.admin-message,
+.user-message {
+	border:1px solid #ccc;
+	padding:10px 10px 10px 10px;
+	width:200px;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+#messagesBlock {
+   border:none;
+}
+
+.clear-both {
+	clear:both;
+}
