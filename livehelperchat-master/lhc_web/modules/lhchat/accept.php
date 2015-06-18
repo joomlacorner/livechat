@@ -9,7 +9,7 @@ if ($Params['user_parameters']['validation_hash'] == sha1(sha1($Params['user_par
 		$chat_id = $accept->chat_id;			
 		if ($accept->wused == 0) {
 			$userID = erLhcoreClassModelUser::fetchUserByEmail($Params['user_parameters']['email'],(trim($Params['user_parameters']['email']) != '' ? trim($Params['user_parameters']['email']) : false));	
-						
+
 			if ( $userID !== false && $accept->ctime > (time() - erLhcoreClassModelChatConfig::fetch('accept_chat_link_timeout')->current_value ) ) {
 				$accept->wused = 1;
 				$accept->saveThis();

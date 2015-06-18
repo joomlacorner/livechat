@@ -6,7 +6,7 @@ try {
 	if ($chat->hash == $Params['user_parameters']['hash']) 	// Allow add messages only if chat is active
 	{
 		$msg = erLhcoreClassModelmsg::fetch($Params['user_parameters']['msgid']);
-				
+		
 		if ($msg->chat_id == $chat->id) {		
 			$tpl = erLhcoreClassTemplate::getInstance( 'lhchat/syncuser.tpl.php');
 			$tpl->set('messages',array((array)$msg));

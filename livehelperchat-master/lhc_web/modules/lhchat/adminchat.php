@@ -8,7 +8,7 @@ $tpl->set('chat',$chat);
 
 if ( erLhcoreClassChat::hasAccessToRead($chat) )
 {
-	
+		
 	$userData = $currentUser->getUserData();
 	
 	if ($Params['user_parameters_unordered']['remember'] == 'true') {

@@ -38,7 +38,6 @@ if (is_object($chat) && $chat->hash == $Params['user_parameters']['hash'])
 	    		}
 	    	}
 
-
 	        $tpl = erLhcoreClassTemplate::getInstance( 'lhchatbox/syncuser.tpl.php');
 	        $tpl->set('messages',$Messages);
 	        $tpl->set('chat',$chat);

@@ -6,7 +6,7 @@
 	        		<?php echo htmlspecialchars($chat->nick)?>
 	        	</span> -->
 	        	<div class="user-avatar">
-	        		<img src="">
+	        		<img src="http://livechat.com/design/defaulttheme/images/general/profile_default.jpg">
 	        	</div>
 	        	<div class="user-message">
 	        		<?php echo erLhcoreClassBBCode::make_clickable(htmlspecialchars($msg['msg']))?>
@@ -14,12 +14,20 @@
 	        	<div class="clear-both"></div>	
         	</div>
 	 <?php } else { ?>
+
+	 		<?php 
+    			$current_user = erLhcoreClassUser::instance(); 
+    			$userData = $current_user->getUserData();
+    			
+
+    			$imgPath = 'http://livechat.com/' . $userData->filepath . $userData->filename;
+    		?>
 	        <div class="message-row message-admin<?php (isset($lastOperatorChanged) && $lastOperatorChanged == true ? print ' operator-changes' : '') ?>" id="msg-<?php echo $msg['id']?>" data-op-id="<?php echo $msg['user_id']?>">
 	        	<!-- <div class="msg-date"><?php if (date('Ymd') == date('Ymd',$msg['time'])) { echo  date(erLhcoreClassModule::$dateHourFormat,$msg['time']);} else {	echo date(erLhcoreClassModule::$dateDateHourFormat,$msg['time']);}; ?></div> -->
 	        	<!-- <span class="usr-tit<?php echo $msg['user_id'] == 0 ? ' vis-tit' : ' op-tit'?>"><?php echo htmlspecialchars($msg['name_support'])?></span> -->
-
+				
 	        	<div class="admin-avatar">
-	        		<img src="">
+	        		<img src="<?php echo $imgPath; ?>">
 	        	</div>
 	        	<div class="admin-message">
 	        		<?php echo erLhcoreClassBBCode::make_clickable(htmlspecialchars($msg['msg']))?>

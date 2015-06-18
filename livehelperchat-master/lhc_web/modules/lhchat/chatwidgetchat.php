@@ -1,5 +1,4 @@
 <?php
-
 // For IE to support headers if chat is installed on different domain
 header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"');
 
@@ -80,6 +79,8 @@ try {
    $tpl->setFile('lhchat/errors/chatnotexists.tpl.php');
 }
 
+
+    	
 $Result['content'] = $tpl->fetch();
 $Result['pagelayout'] = 'widget';
 $Result['pagelayout_css_append'] = 'widget-chat';
